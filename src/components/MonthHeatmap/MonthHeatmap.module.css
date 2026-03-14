@@ -1,0 +1,185 @@
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-warm);
+  border-radius: var(--r-xl);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  animation: fadeUp 0.5s 0.2s ease both;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text-primary);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navBtn {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border-warm);
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.navBtn:hover:not(:disabled) {
+  border-color: var(--amber-dim);
+  color: var(--amber);
+}
+
+.navBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.monthLabel {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+  min-width: 120px;
+  text-align: center;
+}
+
+/* Stats row */
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-elevated);
+  border-radius: var(--r-md);
+  padding: 12px 16px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statVal {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--amber);
+  line-height: 1;
+}
+
+.statLabel {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.statDiv {
+  width: 1px;
+  height: 32px;
+  background: var(--border-warm);
+}
+
+/* Grid */
+.gridWrap {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.dayHeader {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--text-dim);
+  text-align: center;
+  padding-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.emptyCell {
+  aspect-ratio: 1;
+}
+
+.cell {
+  aspect-ratio: 1;
+  border-radius: var(--r-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  position: relative;
+  transition: transform 0.1s;
+}
+
+.cell:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.dayNum {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  line-height: 1;
+}
+
+/* Intensity levels */
+.i0 { background: rgba(255,255,255,0.03); }
+.i1 { background: rgba(245,155,30,0.18); }
+.i2 { background: rgba(245,155,30,0.38); }
+.i3 { background: rgba(245,155,30,0.62); }
+.i4 { background: rgba(245,155,30,0.88); }
+
+.i1 .dayNum, .i2 .dayNum { color: var(--text-secondary); }
+.i3 .dayNum, .i4 .dayNum { color: #0D0B09; }
+
+.today {
+  box-shadow: 0 0 0 1.5px var(--amber);
+}
+
+/* Tooltip */
+.tooltip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-warm);
+  border-radius: var(--r-md);
+  padding: 8px 14px;
+  animation: fadeUp 0.15s ease;
+}
+
+.tooltipDate {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.tooltipCount {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--amber);
+}

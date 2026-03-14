@@ -1,0 +1,41 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border: 1px solid transparent;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+}
+
+.small {
+  padding: 2px 7px;
+  font-size: 0.62rem;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  opacity: 0.85;
+}
+
+.active {
+  box-shadow: 0 0 0 1px currentColor;
+}
+
+/* Category color mappings */
+.fitness  { background: rgba(110,231,183,0.1); color: var(--cat-fitness);  border-color: rgba(110,231,183,0.2); }
+.creative { background: rgba(196,181,253,0.1); color: var(--cat-creative); border-color: rgba(196,181,253,0.2); }
+.social   { background: rgba(252,165,165,0.1); color: var(--cat-social);   border-color: rgba(252,165,165,0.2); }
+.learning { background: rgba(147,197,253,0.1); color: var(--cat-learning); border-color: rgba(147,197,253,0.2); }
+.health   { background: rgba(134,239,172,0.1); color: var(--cat-health);   border-color: rgba(134,239,172,0.2); }
+.work     { background: rgba(253,230,138,0.1); color: var(--cat-work);     border-color: rgba(253,230,138,0.2); }
+.home     { background: rgba(253,186,116,0.1); color: var(--cat-home);     border-color: rgba(253,186,116,0.2); }
+.other    { background: rgba(168,159,148,0.1); color: var(--cat-other);    border-color: rgba(168,159,148,0.2); }

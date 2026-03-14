@@ -1,0 +1,92 @@
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-warm);
+  border-radius: var(--r-xl);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeUp 0.5s 0.15s ease both;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text-primary);
+}
+
+.sub {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.chartWrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bar {
+  transition: opacity 0.2s;
+}
+
+.bar:hover {
+  opacity: 0.8;
+}
+
+.legend {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+}
+
+.dotAmber {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--amber);
+  flex-shrink: 0;
+}
+
+.dotDim {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: rgba(245,155,30,0.45);
+  flex-shrink: 0;
+}
+
+.dotEmpty {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
