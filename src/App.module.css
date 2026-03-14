@@ -1,0 +1,223 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Ambient warm glow top-center */
+.bgGlow {
+  position: fixed;
+  top: -180px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(245,155,30,0.07) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Header */
+.header {
+  position: relative;
+  z-index: 1;
+  padding: 20px 0 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4px;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoIcon {
+  font-size: 1rem;
+  color: var(--amber);
+  animation: float 4s ease-in-out infinite;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--text-primary) 40%, var(--amber));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Main layout */
+.main {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Top row: logger + streak */
+.topRow {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 20px;
+  align-items: start;
+}
+
+.loggerCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.streakCol {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+  text-align: center;
+  padding: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+  border-top: 1px solid var(--border);
+}
+
+/* ── Loading splash ────────────────────────────────── */
+.splash {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splashIcon {
+  font-size: 1.6rem;
+  color: var(--amber);
+  animation: float 1.5s ease-in-out infinite;
+}
+
+/* ── Header inner layout ───────────────────────────── */
+.headerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 860px;
+  padding: 0 20px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Sync dot */
+.syncDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--amber);
+  animation: pulse-ring 1.2s ease-out infinite;
+  flex-shrink: 0;
+}
+
+/* User chip */
+.userChip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-warm);
+  border-radius: 100px;
+  padding: 4px 12px 4px 4px;
+}
+
+.avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--amber-glow);
+  border: 1px solid var(--amber-dim);
+  color: var(--amber);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.userName {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.signOutBtn {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  transition: color 0.15s;
+  white-space: nowrap;
+  padding-left: 4px;
+  border-left: 1px solid var(--border-warm);
+}
+
+.signOutBtn:hover { color: var(--rose); }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .topRow {
+    grid-template-columns: 1fr;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .main {
+    padding: 20px 14px 48px;
+    gap: 16px;
+  }
+
+  .userName {
+    display: none;
+  }
+
+  .headerInner {
+    padding: 0 14px;
+  }
+}
